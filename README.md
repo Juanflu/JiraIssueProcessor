@@ -25,29 +25,32 @@ Follow these steps to set up and run the application.
 ### Usage
 
 1. **Clone the Repository**
+   
     ```bash
     git clone <repository-url>
     ```
+    
     ```bash
     cd JiraIssueProcessor
     ```
    
-2. **Generate your Jira Personal Access Token (PAT)**
+3. **Generate your Jira Personal Access Token (PAT)**
    - Go to the Personal Access Tokens section in your profile: https://{YOUR_JIRA_INSTANCE}/secure/ViewProfile.jspa?selectedTab=com.atlassian.pats.pats-plugin:jira-user-personal-access-tokens
    - Create a new token and save it securely.
 
-3. **Export your JSON from Jira API**
+4. **Export your JSON from Jira API**
    - Using [Bruno](https://www.usebruno.com/) or any other API Client, get the export of the Jira query that you want.
+  
    ```
    curl --request GET \
    --url 'https://{YOUR_JIRA_INSTANCE}/rest/api/2/search?expand=changelog&maxResults=150&jql={YOUR_JQL_QUERY}' \
    --header 'authorization: Bearer {YOUR_JIRA_PAT}'
    ```
  
-4. **Prepare Your Input File**
+5. **Prepare Your Input File**
    - Place your Jira export JSON export file in the root of the project directory. For this example, let's assume your file is named `my-jira-export.json`.
 
-5. **Update File Paths in the Code**
+6. **Update File Paths in the Code**
    - Open the `Program.cs` file.
    - Locate the `Main` method.
    - Change the `inputFilePath` and `outputFilePath` variables to match your input file and desired output file name.
@@ -63,13 +66,13 @@ Follow these steps to set up and run the application.
    }
    ```
 
-6. **Run the Application**
+7. **Run the Application**
    - Execute the following command from your terminal in the project's root directory:
    ```bash
    dotnet run
    ```
 
-7. **Find the Output**
+8. **Find the Output**
    - The application will generate a minified JSON file (e.g., `my-jira-export-minified.json`) in the same directory. This file contains the processed and cleaned data.
 
 
