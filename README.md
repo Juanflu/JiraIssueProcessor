@@ -90,18 +90,11 @@ You can easily customize the cleaning process by modifying the `HashSet` collect
 Once the minimized file is ready, then is time to analyze the data that contains. For this purpose you can use any AI Tool as [Gemini](https://gemini.google.com/) or [NotebookLM](https://notebooklm.google.com/).
 Here you have some examples of prompts:
 
-```
-Analyze the cycle time of these tickets. Calculate the average time from when a ticket moves to 'In Progress' until it reaches 'Done'. Identify the tickets with the highest cycle time and provide possible causes based on their transition history.
-```
 
-```
-How many tickets have returned to 'In Progress' from 'In Review' or from 'Blocked'? List those tickets, how many times it occurred for each one, and the total time lost due to that rework.
-```
+> Analyze the cycle time of these tickets. Calculate the average time from when a ticket moves to 'In Progress' until it reaches 'Done'. Identify the tickets with the highest cycle time and provide possible causes based on their transition history.
 
-```
-Calculate the average time tickets have spent in each column of the board (To Do, In Progress, In Review, Blocked, Done). Which column represents the biggest bottleneck?
-```
+> How many tickets have returned to 'In Progress' from 'In Review' or from 'Blocked'? List those tickets, how many times it occurred for each one, and the total time lost due to that rework.
 
-```
-Generate an executive summary of the team's delivery status based on this data. Include: team velocity, process health, main risks identified, and a specific recommendation for the next sprint.
-```
+> Calculate the average time tickets have spent in each column of the board (To Do, In Progress, In Review, Blocked, Done). Which column represents the biggest bottleneck?
+
+> Generate an executive summary of the team's delivery status based on this data. Include: team velocity, process health, main risks identified, and a specific recommendation for the next sprint.
